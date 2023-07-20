@@ -1,34 +1,20 @@
-# -- stackhawk configuration for example --
+
+ # -- stackhawk configuration for test --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 7b322482-a8a4-4611-a9a2-fd2b9861d4ab # (required)
+  applicationId: 49a5145d-8a8e-4c34-b33c-3028f0b9316c # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
-  env: Development # (required)
+  env: Pre-Production # (required)
   # -- The url of your application to scan --
   host: http://3.86.202.117 # (required)
 
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
-  soapConf:
-    path: :8080 # OR...
-#     filePath: features.xsd
+  openApiConf:
+    filePath: /usr/share/maven # OR...
+#     path: /swagger.json
   autoPolicy: true
   autoInputVectors: true
-
-app:
-  # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 7b322482-a8a4-4611-a9a2-fd2b9861d4ab # (required)
-  # -- The environment for the applicationId defined in the StackHawk platform. --
-  env: Development # (required)
-  # -- The url of your application to scan --
-  host: http://3.86.202.117 # (required)
-
-hawk:
-  startupTimeoutMinutes: 1
-  spider:
-    base: false
-
-# -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
   # Configuration Docs: https://docs.stackhawk.com/hawkscan/configuration/
 
 # -- If Authenticated Scanning is needed, add here --
@@ -38,3 +24,6 @@ hawk:
 # -- Help Section --
   # Docs: https://docs.stackhawk.com/
   # Contact Support: support@stackhawk.com
+hawk:
+  startupTimeoutMinutes: 1
+  
