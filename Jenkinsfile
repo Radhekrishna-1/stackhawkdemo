@@ -1,7 +1,7 @@
 pipeline {
-  agent {label 'linux'}
+  agent { label 'linux' }
   stages {
-    stage ("Checkout code") {
+    stage("Checkout code") {
       steps {
         checkout scm
       }
@@ -12,22 +12,20 @@ pipeline {
         sh 'sudo cp index.html /var/www/html'
       }
     }
-    stage ("Pull HawkScan Image") {
+    stage("Pull HawkScan Image") {
       steps {
         sh 'sudo docker pull stackhawk/hawkscan'
       }
     }
-    stage ("Run HawkScan Test") {
+    stage("Run HawkScan Test") {
       environment {
         HAWK_API_KEY = credentials('stackhawk-api-key')
       }
       steps {
-        sh ''' sudo
-          docker run -v ${WORKSPACE}:/hawk:rw -t \
-            -e API_KEY=${HAWK_API_KEY} \
+        sh "sudo docker run -v ${WORKSPACE}:/hawk:rw -t \
+            -e API_KEY=${env.HAWK_API_KEY} \
             -e NO_COLOR=true \
-            stackhawk/hawkscan:2.7.0
-        '''
+            stackhawk/hawkscan"
       }
     }
   }
