@@ -1,10 +1,12 @@
+# -- stackhawk configuration for example --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 5df29034-ceb2-4a98-b086-336c5793dbe0 # (required)
+  applicationId: 7b322482-a8a4-4611-a9a2-fd2b9861d4ab # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
   env: Development # (required)
   # -- The url of your application to scan --
-  host: http://3.131.110.202
+  host: http://3.86.202.117 # (required)
+
 hawk:
   startupTimeoutMinutes: 1
   spider:
