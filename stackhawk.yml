@@ -1,11 +1,10 @@
-# -- stackhawk configuration for Test --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 1b5dcf6d-eab8-404c-9b65-7303a5d5cd8f # (required)
+  applicationId: 5df29034-ceb2-4a98-b086-336c5793dbe0 # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
-  env: Pre-Production # (required)
+  env: Development # (required)
   # -- The url of your application to scan --
-  host: https://sanilreddy.github.io/stackhawkdemo # (required)
+  host: http://3.131.110.202
 hawk:
   startupTimeoutMinutes: 1
   spider:
