@@ -15,9 +15,9 @@ pipeline {
     }
     stage("Pull HawkScan Image") {
       steps {
-        sh 'sudo docker pull stackhawk/hawkscan'
-        sh 'pwd'
-        sh 'sudo docker images'
+        #sh 'sudo docker pull stackhawk/hawkscan'
+        #sh 'pwd'
+        #sh 'sudo docker images'
       }
     }
     stage("Run HawkScan Test") {
