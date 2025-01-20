@@ -13,16 +13,16 @@ pipeline {
         sh 'sudo cp index.html /var/www/html'
       }
     }
-    //stage("Pull HawkScan Image") {
-      //steps {
-        //sh 'sudo docker pull stackhawk/hawkscan'
-        //sh 'pwd'
-        //sh 'sudo docker images'
-      //}
-    //}
+    stage("Pull HawkScan Image") {
+      steps {
+        sh 'sudo docker pull stackhawk/hawkscan'
+        sh 'pwd'
+        sh 'sudo docker images'
+      }
+    }
     stage("Run HawkScan Test") {
       environment {
-        HAWK_API_KEY = credentials('stackhawk-api-key')
+        HAWK_API_KEY = credentials("stackhawk-api-key")
       }
       steps {
         sh "sudo docker run -v ${WORKSPACE}:/hawk:rw -t \
