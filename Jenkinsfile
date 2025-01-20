@@ -10,14 +10,14 @@ pipeline {
     stage("Deploy site") {
       steps {
         sh 'pwd'
-        sh 'sudo cp index.html /var/www/html'
+        sh 'cp index.html /var/www/html'
       }
     }
     stage("Pull HawkScan Image") {
       steps {
-        sh 'sudo docker pull stackhawk/hawkscan'
+        sh 'docker pull stackhawk/hawkscan'
         sh 'pwd'
-        sh 'sudo docker images'
+        sh 'docker images'
       }
     }
     stage("Run HawkScan Test") {
