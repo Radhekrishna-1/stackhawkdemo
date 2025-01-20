@@ -10,7 +10,7 @@ pipeline {
     stage("Deploy site") {
       steps {
         sh 'pwd'
-        //sh 'sudo cp index.html /var/www/html'
+        sh 'sudo cp index.html /var/www/html'
       }
     }
     stage("Pull HawkScan Image") {
