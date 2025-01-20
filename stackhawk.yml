@@ -1,12 +1,14 @@
 # -- stackhawk configuration for test --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 519ff371-635e-4048-894f-5f3f16cfa096
-  # 05b5d092-4a43-472c-b11d-b0019f49722f # (required)
+  applicationId: 31cba08f-e2da-4cef-84b0-968828f1ef5e   #MERN
+  # 519ff371-635e-4048-894f-5f3f16cfa096   #TEST key
+  # 05b5d092-4a43-472c-b11d-b0019f49722f # (required) Jenkins
   # -- The environment for the applicationId defined in the StackHawk platform. --
   env: Development # (required)
   # -- The url of your application to scan --
-  host: http://10.170.1.43
+  host: http://localhost:5002
+  # http://10.170.1.43
   # http://192.168.0.105 # (required)
 
 
